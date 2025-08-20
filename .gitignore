@@ -1,0 +1,52 @@
+# Dependencies
+/vendor/
+node_modules/
+
+# Composer
+composer.lock
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Laravel specific
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+
+# Testing
+coverage/
+.phpunit.cache
+/tests/coverage/
+
+# Build artifacts
+/build/
+/dist/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Temporary files
+*.tmp
+*.temp

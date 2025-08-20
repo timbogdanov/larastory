@@ -1,0 +1,41 @@
+{
+  "name": "timbogdanov/larastory",
+  "description": "A Laravel component library documentation tool inspired by Storybook",
+  "type": "library",
+  "license": "MIT",
+  "keywords": ["laravel", "components", "storybook", "documentation", "ui"],
+  "authors": [
+    {
+      "name": "Tim Bogdanov",
+      "email": "tim.bogdanov@icloud.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "laravel/framework": "^10.0|^11.0",
+    "livewire/livewire": "^3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.0",
+    "orchestra/testbench": "^8.0|^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Larastory\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Larastory\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Larastory\\LarastoryServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
