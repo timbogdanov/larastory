@@ -85,7 +85,7 @@ return [
 ## Custom Subdomain
 To use a different subdomain, add to your `.env` file:
 ```text
-LARASTORY_SUBDOMAIN=storybook
+LARASTORY_SUBDOMAIN=ui
 ```
 Then update your hosts file accordingly:
 ```text
