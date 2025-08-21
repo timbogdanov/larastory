@@ -14,7 +14,7 @@ class LarastoryServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        // Only load in local environment for now
+        // Only load in a local environment for now
         if (!app()->environment(['local', 'testing'])) {
             return;
         }
