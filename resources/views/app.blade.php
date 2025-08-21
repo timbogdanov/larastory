@@ -15,7 +15,6 @@
     <div class="w-64 bg-white border-r border-gray-200 flex-shrink-0">
         <div class="p-4 border-b border-gray-200">
             <h1 class="text-xl font-bold text-gray-900">Larastory</h1>
-            <p class="text-sm text-gray-500">Component Library</p>
         </div>
 
         <div class="p-4">
@@ -51,7 +50,7 @@
         </div>
 
         <!-- Preview Area -->
-        <div class="flex-1 p-6">
+        <div class="flex-1 p-6 bg-white">
             @if(isset($component))
                 <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
                     <div class="text-center text-gray-500">

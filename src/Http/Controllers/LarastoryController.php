@@ -2,22 +2,24 @@
 
 namespace Larastory\Http\Controllers;
 
+use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
+use Illuminate\View\View;
 
 class LarastoryController extends Controller
 {
-    public function index()
+    public function index(): View
     {
         return view('larastory::app');
     }
 
-    public function component($component)
+    public function component($component): View
     {
         // TODO: Load and display specific component
         return view('larastory::app', compact('component'));
     }
 
-    public function listComponents()
+    public function listComponents(): JsonResponse
     {
         // TODO: Return JSON list of all components
         return response()->json([
@@ -29,7 +31,7 @@ class LarastoryController extends Controller
         ]);
     }
 
-    public function getStories($component)
+    public function getStories($component): JsonResponse
     {
         // TODO: Return JSON list of stories for a component
         return response()->json([

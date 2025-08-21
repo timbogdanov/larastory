@@ -2,28 +2,29 @@
 
 namespace Larastory;
 
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;
 
 class LarastoryServiceProvider extends ServiceProvider
 {
-    public function register()
+    public function register(): void
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/larastory.php', 'larastory');
     }
 
-    public function boot()
+    public function boot(): void
     {
         // Debug output
-        \Log::info('Larastory ServiceProvider boot() called');
+        Log::info('Larastory ServiceProvider boot() called');
 
         // Only load in local environment for now
         if (!app()->environment(['local', 'testing'])) {
-            \Log::info('Larastory: Not loading (not local environment)');
+            Log::info('Larastory: Not loading (not local environment)');
             return;
         }
 
-        \Log::info('Larastory: Loading in local environment');
+        Log::info('Larastory: Loading in local environment');
 
         $this->publishes([
             __DIR__ . '/../config/larastory.php' => config_path('larastory.php'),
@@ -33,10 +34,10 @@ class LarastoryServiceProvider extends ServiceProvider
 
         $this->registerRoutes();
 
-        \Log::info('Larastory: Routes registered');
+        Log::info('Larastory: Routes registered');
     }
 
-    protected function registerRoutes()
+    protected function registerRoutes(): void
     {
         // Try multiple domain patterns to catch the subdomain
         $patterns = [
