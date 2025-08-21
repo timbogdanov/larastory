@@ -8,7 +8,6 @@ class LarastoryController extends Controller
 {
     public function index()
     {
-        dd('test');
         return view('larastory::app');
     }
 
